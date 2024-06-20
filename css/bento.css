@@ -1,0 +1,111 @@
+body{
+    
+    margin: 100px 100px 0px;
+    margin: 150px;
+    background: linear-gradient(to bottom, #555555, #000000);
+}
+
+
+.container{
+    background-color: rgba(169, 169, 169, 0);
+    border: white 2px solid;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px;
+    gap: 20px;
+    height: auto;
+    padding:20px;
+    box-shadow: 0px 0px 20px 10px #888888;
+
+
+}
+
+div{
+    overflow: hidden; 
+    border-radius: 35px;
+    border: white 2px solid;
+    
+}
+
+.text{
+    color: white;
+    font-size: x-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px;
+
+}
+
+
+@media (width> 900px) { /* Corregir media query */
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .container div:first-child{
+        grid-column-start: span 3;
+        height: auto;
+       
+    }
+
+    .container > div:nth-child(4) {
+        grid-column-start: 3; /* Empieza en la cuarta columna */
+        grid-row-end: span 3; /* Termina en la quinta columna (ocupa solo una columna) */
+    }
+
+    .container> :nth-child(7) {
+        grid-column-start: span 3;
+        height: 200px;
+        
+    }
+}
+
+
+@media (min-width: 700px) and (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr 1fr ;
+    }
+
+    .container div:first-child{
+        grid-column-start: span 2;
+    }
+    
+
+}
+
+.container div:first-child{
+    background-image: url('../imagenes/header2.jpeg');
+    background-size: 100%;
+    background-position: center; /* Centrar la imagen */
+    background-repeat: no-repeat;
+    width: 100%;
+    
+}
+
+.container> :nth-child(7) {
+    background-image: url('../imagenes/footer.jpg');
+    background-size: 100%;
+    background-position: center; /* Centrar la imagen */
+    background-repeat: no-repeat;
+    width: 100%;
+    
+}
+
+div img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ajustar la imagen para que cubra todo el área del div */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
